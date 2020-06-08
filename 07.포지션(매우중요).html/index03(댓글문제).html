@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-wrap{
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid #777;
+            position: relative;
+            padding: 5px;
+        }
+
+        .list-img{ /*이미지영역*/
+            border: 1px solid #777;
+            position: absolute;
+            top:5px;
+            left:5px;
+        }
+        .list-content{
+            padding-left: 60px;
+        }
+        .list-content textarea{
+            width: 100%;
+            box-sizing: border-box; /*박스모델이 width+border+padding이 실제 박스 넓이인데 보더박스를 줘야 패딩과 보더가 박스크기에
+                                    추가되지 않고 크기가 유지 된다*/
+            resize: vertical;
+            height: 55px;
+        }
+
+        .list-control{
+            padding-left:65px;
+            overflow: hidden;/*부모에 히든*/
+        }
+        .reply-control{
+            height: 62px;
+        }
+
+        .list-control .list-input{
+            float: left;
+        }
+
+        .list-control .list-input input{
+            display: block; /*인풋요소를 블록으로 변경->세로로*/
+        }
+        .list-control .button {
+            float:right;
+        }
+
+    
+    </style>
+</head>
+<body>
+<div>
+    <div class="list-wrap">
+        <div class="list-img">
+            <img src="img/bgimg.png" height="50">
+        </div>
+
+        <div class="list-content">
+            <textarea placeholder="댓글을 입력하세요"></textarea>
+        </div>
+        <div class="list-control">
+            <div class="list-input">
+                <input type="text">
+                <input type="text">
+
+            </div>
+            <button class="button">등록하기</button>
+        </div>
+
+    </div>
+    <div class="list-wrap">
+        <div class="list-img">
+            <img src="img/bgimg.png" height="50">
+        </div>
+       <div class="list-control reply-control">
+            <div class="list-input">
+                <p>제목</p>
+                <p>수정</p>
+            </div>
+            <button class="button">수정</button>
+            <button class="button">삭제</button>
+        </div>
+
+    </div>
+       
+</div>
+</body>
+</html>

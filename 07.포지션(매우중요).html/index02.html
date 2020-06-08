@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap {
+            overflow: hidden;
+            width: 900px;
+            margin: 0 auto;
+            
+        }
+        .box{
+            float: left;
+            background-color: cyan;
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+
+        /*포지션 리레이블티브 ; 각각 box wrap에 추가해서 확인*/
+        .pos{
+            position: absolute;
+            top:0px;
+            left:0px;
+            background-color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">박스1</div>
+        <div class="box">박스1</div>
+        <div class="box">박스1</div>
+        <div class="box">
+            박스1
+            <div class="pos">야야야</div>
+        </div>
+    </div>
+</body>
+</html>
