@@ -1,0 +1,84 @@
+  /*디자인 시작하기전에 웹폰트와 초기화 선언*/
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+
+  *{padding: 0; margin: 0; box-sizing: border-box;}
+
+  body,html{width: 100%; font-family: 'Nanum Myeongjo', serif; }
+
+  img{max-width: 100%; height: 100%;}
+  ul,li{list-style: none;}    
+
+  input,textarea,select,button{
+      -moz-appearance :none;
+      -webkit-appearance: none;
+      /*브라우저별로 고유하게 적용되는 form관련 요소를 제거*/
+  }
+
+  .btn{
+      border-radius: 0px;
+  }
+  /*헤더*/
+  header{position:fixed; top:0; left:0; z-index: 10; width: 100%;}
+  .navbar {background-color: #263238; border-radius: 0px; margin:0;}
+
+  .navbar-brand {padding:0px ;}
+
+  .nav a {color:pink;}
+
+  .nav > li > a:hover, .nav > li > a:focus {background-color: #304047;} /*호버와 포커스시 가상선택자 변경*/
+
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {background-color: #304047;} /*드롭다운메뉴 호버와 포커스시 가상선택자 변경*/
+
+  .navbar-toggle {border-color: #fff;}
+  .navbar-toggle .icon-bar{background-color: #fff;}
+
+  /*푸터*/
+  footer{background-color: #263238; margin-top: 50px; }
+  .footer-menu{text-align: center; margin:0;}
+  .footer-menu li {display: inline-block; padding:10px 30px}
+  .footer-menu li a {text-decoration: none; color:pink}
+
+  footer .copyright{margin:0 auto; float:none; color:pink}
+
+  /*섹션*/
+  section{margin-top: 50px;}
+
+  <!--커리셀 좌우측 버튼-->
+  .carousel-control.right{background-image:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);}
+  .carousel-control.left{background-image:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);}
+
+  /*메인배너1*/
+  .main-banner1 {
+      background: linear-gradient(90deg,#0c151c 1.3125rem,transparent 1%) 50%,linear-gradient(#0c151c 1.3125rem,transparent 1%) 50%,#263747;
+      background-size: 1.5rem 1.5rem;
+      padding: 6rem 0;
+      color: #fff;
+  }
+
+  .banner-cap{text-align: center;}
+  
+  <!--메인상품화면-->
+  /*a태그가 인라인 요소에서 이미지를 감싸지 못함 블럭으로 변경*/
+
+  .prod-list {overflow: hidden;} /*col속성이 플롯을 가지고 있기 때문에 부모요소 오버플로우 히든 */
+  .prod-list, .prod-link {border:1px solid #d6d6d6; display: block; text-align: center;}
+  .prod-list, .prod-list > li[class*="col-"]{padding:5px;}
+   
+  
+  .prod-link .arrow{
+    display:block;
+    position:absolute; 
+    bottom: 15px; 
+    left:15px; 
+    width: 100px; 
+    line-height: 50px;
+    height: 50px;
+    color: white;
+    background-color: #d6d6d6;}
+    
+/*호버시 기능*/
+.prod-link:hover{ border-color: #4285F4; } /*호버가 올라갔을때*/
+.prod-link > .hover{opacity: 0; width: 100px; background-color: #4285F4;}
+.prod-link:hover > .arrow{opacity: 0; }
+.prod-link:hover > .hover{opacity: 1; background-color: #4285F4;}/*호버 올라갔을때 호버클래스 투명도 1*/
+ 
