@@ -1,0 +1,15 @@
+
+/*header*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+body,html {width: 100%; font-family: font-family: 'Arvo', serif;}
+
+*{margin: 0; padding:0;}
+header{position:fixed; top:0; left:0; z-index: 10; width: 100%;}
+header h1 {background-color: white; font-size: 100px; letter-spacing:30px;text-align: center; margin: 0 auto;}
+header > ul {position:absolute; top:10px;right:10px; overflow: hidden;}
+header > ul li {float: left; margin: 10px 20px;}
+header > nav ul li {display: inline-block;}
+header > nav ul li a {display: block; color: #fff; height: 40px;}
+li {list-style-type: none;}
+a {text-decoration: none; color: #555;}

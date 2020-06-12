@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토끼와자라</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <script src="js/bootstrap.js"></script>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Patua+One&display=swap');
+
+        *{padding: 0; margin: 0 auto; box-sizing: border-box; text-align: center; text-decoration-line: none;}
+        img{max-width: 100%; height: 100%;}
+        ul,li{list-style: none;} 
+        body,html{width: 100%; font-family: 'Merriweather', serif;}
+
+
+
+       header {text-align: center; position: fixed; top:0px; left:0px; width: 100%; z-index: 10; background-color: #fff;}
+       .mini-menu {display:flex; justify-content: flex-end; position: absolute; right: 10px; top: 15px;}
+       .mini-menu > li > a {margin: 10px; text-decoration: none; color: #555; outline: 0; font-size: 15px;}
+       .zara {font-size: 90px; letter-spacing :20px; position: relative;}
+       .navbar-inverse {display:flex; justify-content: center;}
+       .navbar-inverse > ul {border-bottom: 1px solid #444; transition: all 0.5s linear 0s;}
+       .navbar-inverse > ul > li > a {text-decoration-color: #fff; line-height: 45px; font-size: 17px;}
+       .navbar {border: 0; border-radius: 0; margin:0; }
+       @media (max-width: 770px) {
+           .zara{font-size: 30px;}
+           .mini-menu > li > a {font-size: 10px;}
+        .navbar-inverse > ul > li > a {font-size: 5px; margin: 0px; padding: 0px;}
+       }
+
+       .aside{position: fixed; top: 50%; right: 0; z-index: 5;}
+       .side-menu > li {}
+       .side-menu > li > a {display:block; width: 100px; height: 70px; 
+        background-color: #333; border-top:1px #4d4d4d solid; color: white;
+        padding-top:10px; padding-bottom: 10px; font-size: 12px;}
+
+       .main-img {float:none; position: relative;}
+       .main-img > img {width: 100%; margin-top: 205px;}
+       .text-area {position: absolute; bottom: 30%; right:10%; }
+       .text-area > h2, .text-area > p {color: #fff; background-color: rgba(0, 0, 0, 0.5); text-align: right; padding: 3px;}
+       @media (max-width: 770px) {
+           .main-img {margin-top: 99px;}
+           .text-area {bottom: 16%; right: 12%;}
+           .text-area > h2, .text-area > p {text-align: center;}
+       }
+
+       .contents {margin-top:20px}
+       .content h2{font-size: 20px; color: #555; margin-top: 10px;}
+       .content h3{font-size:18px; color: #555;}
+       .content> img{width: 100%;}
+       .content {margin-bottom: 20px;}
+       .content {position: relative;}
+       .content-hover > a {display: block; background-color: rgba(0, 0, 0, 0.6); position: absolute; width: 100%; height: 100%; top: 0%; left:0%; text-align: center; opacity: 0; color:#fff; text-decoration-line: none;}
+       .content-hover > a:hover {opacity: 1;}
+       
+
+        footer{background-color: #222; text-decoration-color: #fff; text-align: center;}
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+            <h1 class="zara">ZARA</h1>
+                <ul class="mini-menu">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">REGISTER</a></li>
+                </ul>
+                <nav class="navbar navbar-inverse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">WOMAN</a></li>
+                        <li><a href="#">TRF</a></li>
+                        <li><a href="#">MAN</a></li>
+                        <li><a href="#">KIDS</a></li>
+                        <li><a href="#">EDITORIALS</a></li>
+                    </ul>
+                </nav>
+    </header>
+
+    <div class="aside">
+        <ul class="side-menu">
+            <li><a href="#">전화문의<br>010-1234-5678</a></li>
+            <li><a href="#">카카오톡<br>1:1상담</a></li>
+            <li><a href="#">오시는길</a></li>
+        </ul>
+    </div>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="main-img">
+                    <img src="img/main.jpg">
+                    <div class="text-area">
+                        <h2>Category Bannner</h2>
+                        <p>Upload image and description</p>
+                        <p>Upload image and description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contents">
+        <div class="container">
+            <div class="row">
+                <div class="">
+                    <ul>
+                        <li>
+                           <div class="content col-lg-3 col-md-6 col-xs-12">
+                               <img src="img/img_01.jpg">
+                               <h2>Product with Variants</h2>
+                               <h3>
+                                   ★★★☆☆ 2REVIEW(S) <br>
+                                   $59.00
+                               </h3>
+                               <div class="content-hover">
+                                    <a href="#">Jaket</a>
+                               </div>
+                            </div> 
+                        </li>
+
+                        <li>
+                            <div class="content col-lg-3 col-md-6 col-xs-12">
+                                <img src="img/img_02.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆ 2REVIEW(S) <br>
+                                    $59.00
+                                </h3>
+                                <div class="content-hover">
+                                     <a href="#">Jaket</a>
+                                </div>
+                             </div> 
+                         </li>
+                         <li>
+                            <div class="content col-lg-3 col-md-6 col-xs-12">
+                                <img src="img/img_03.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆ 2REVIEW(S) <br>
+                                    $59.00
+                                </h3>
+                                <div class="content-hover">
+                                     <a href="#">Jaket</a>
+                                </div>
+                             </div> 
+                         </li>
+                         <li>
+                            <div class="content col-lg-3 col-md-6 col-xs-12">
+                                <img src="img/img_04.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆ 2REVIEW(S) <br>
+                                    $59.00
+                                </h3>
+                                <div class="content-hover">
+                                     <a href="#">Jaket</a>
+                                </div>
+                             </div> 
+                         </li>
+                         <li>
+                            <div class="content col-lg-3 col-md-6 col-xs-12">
+                                <img src="img/img_05.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆ 2REVIEW(S) <br>
+                                    $59.00
+                                </h3>
+                                <div class="content-hover">
+                                     <a href="#">Jaket</a>
+                                </div>
+                             </div> 
+                         </li>
+                         <li>
+                            <div class="content col-lg-3 col-md-6 col-xs-12">
+                                <img src="img/img_06.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆ 2REVIEW(S) <br>
+                                    $59.00
+                                </h3>
+                                <div class="content-hover">
+                                     <a href="#">Jaket</a>
+                                </div>
+                             </div> 
+                         </li>
+                         <li>
+                            <div class="content col-lg-3 col-md-6 col-xs-12">
+                                <img src="img/img_07.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆ 2REVIEW(S) <br>
+                                    $59.00
+                                </h3>
+                                <div class="content-hover">
+                                     <a href="#">Jaket</a>
+                                </div>
+                             </div> 
+                         </li>
+                         <li>
+                            <div class="content col-lg-3 col-md-6 col-xs-12">
+                                <img src="img/img_08.jpg">
+                                <h2>Product with Variants</h2>
+                                <h3>
+                                    ★★★☆☆ 2REVIEW(S) <br>
+                                    $59.00
+                                </h3>
+                                <div class="content-hover">
+                                     <a href="#">Jaket</a>
+                                </div>
+                             </div> 
+                         </li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+
+         </div>
+    </section >
+    <footer>
+        <div>
+            푸터영역입니다.
+        </div>
+    </footer>
+
+</body>
+</html>

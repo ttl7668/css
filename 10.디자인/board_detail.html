@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <!--제이쿼리 추가-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!--가장 아래쪽에 개인디자인을 추가-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/stayle.css">
+
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!--로고를 넣는 영역-->
+                <a class="navbar-brand" href="#"><img src="img/logo.svg" ></a>
+               
+              </div>
+
+              <!--네비바 안에 포함되는 컨텐츠-->
+              <div class="collapse navbar-collapse" id="myNavbar">
+                  <!--좌측 메뉴-->
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+
+                <!--우측 드롭다운-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+
+                        <a class="dropdown-toggle" data-toggle="dropdown">정보관리
+                            <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                          <li><a href="#"><span class="glyphicon glyphicon-log-in">로그인</span></a></li>
+                     
+                        </ul>
+                    </li>
+                    <!--
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>상세보기<small>(쿠팡예제)</small></h1>
+            <hr>
+            <div class="row">
+                <!--상품 상세 영역-->
+                <div class="col-md-6 col-xs-12">
+                    <img src="img/detail.jpg">
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="info">
+                        <p class="title">[게릴라특가]30일체험가능! 벨라페이스 3컬러 LED마스트 눈마사지 겸용/4단계 시간조절/피부홈케어+사은품까지!!</p>
+                        <p class="price"><strong>135,000원</strong></p>
+                        <p class="delivery">무료배송<br>
+                            상품별배송 | 택배배송 | 당일출고,12시 이전결제건까지 해당(주말,공휴일 제외)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </p>
+                    </div>
+                    <div class="control">
+                        <div class="price">
+                            <p class="left">총 상품금액</p>
+                            <p class="right"><strong>0원</strong></p>
+                        </div>
+                        <div class="order">
+                            <button class="left btn btn-default">장바구니</button>
+                            <button class="right btn btn-primary">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--댓글영역-->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form class="reply-wrap">
+                        <div class="reply-img">
+                            <img src="img/profile.png">
+                        </div>
+                        <div class="reply-content">
+                            <textarea class="form-control" rows="3"></textarea>
+                            <div class="reply-group">
+                                <div class="reply-input">
+                                <input type="text" class="form-control" placeholder="이름">
+                                <input type="password" class="form-control" placeholder="비밀번호">
+                                </div>
+                                <button class="right btn btn-info">등록하기</button>
+                          </div> 
+                        </div>
+                    </form>
+                    <div class="reply-wrap">
+                        <div class="img">
+                            <img src="img/profile.png">
+                        </div>
+                        <div class="reply-content">
+                            <div class="reply-group">
+                                <strong>홍길동</strong>
+                                <small>2020/06/10</small>
+                                <a href="#" class="right"><span class="glyphicon glyphicon-pencil"></span>수정</a>
+                                <a href="#" class="right"><span class="glyphicon glyphicon-remove"></span>삭제</a>
+                            </div>
+                            <p class="clearfix">여기는 댓글영역</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="footer-menu">
+                        <li><a href="">고객센터</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">개인정보취급방침</a></li>
+                    </ul>
+                                       
+                </div>
+                <div class="col-xs-12 col-lg-8 copyright">
+                    <a href="#">
+                    <img src="img/logo.svg" width="30">
+                    </a>
+                    bootstrap |대표자 :홍길동|e-mail:info@info.co.kr<br>
+                    사업자번호 : 123-45-678|개인정보보호책임자:홍길동| 통신판매업:2019-서울강남-0001<br>
+                    주소:서울시 강남구
+                    <address>어드레스.all rights reseved</address>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
