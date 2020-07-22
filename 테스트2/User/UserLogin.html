@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--카카오SDK-->
+    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+        @font-face { font-family: 'GmarketSansBold'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') 
+        format('woff'); font-weight: normal; 
+        font-style: normal; }
+
+        body{width:100%; font-family: 'GmarketSansBold';
+        font-style: normal; 
+        font-weight: normal;
+        }
+
+        *{padding:0;margin:0;box-sizing:border-box;}
+        .btn-block{border-radius: 0px;}
+
+        section {margin-top:50px;}
+        .titlebox {width:250px; 
+                text-align: center;}
+
+
+    </style>
+</head>
+<body>
+    <section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-9 col-sm-12 join-form">
+                    
+                    <div class="form-group">
+                        <button type="button" class="btn btn-lg btn-info btn-block"
+                        onclick="location.href='/heechart/'">메인화면</button>
+                    </div>
+                    
+                    <div class="titlebox">로그인</div>
+
+					<form action="LoginForm" method="post" name="regForm">
+						<div class="form-group">
+							<label for="id">이메일</label> <input type="text"
+								class="form-control" name="id" id="id" placeholder="example@naver.com">
+						</div>
+						<div class="form-group">
+							<label for="password">비밀번호</label> <input type="password"
+								class="form-control" name="pw" id="password" placeholder="********">
+						</div>
+
+						<div class="form-group">
+                            <button type="button" class="btn btn-lg btn-reset-password btn-block"
+								onclick="location.href='ResetPw'">비밀번호를 잊으셨나요?</button>
+							<button type="button" class="btn btn-lg btn-success-join btn-block"
+								onclick="location.href='Join'">회원가입</button>
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-lg btn-info btn-block">로그인</button>
+						</div>
+						
+						<!--카카오로그인 버튼-->
+						카카오 로그인 버튼
+						<a id="custom-login-btn" href="javascript:loginWithKakao()"> <img
+							src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
+							width="222" />
+						</a>
+						카카오 로그인 버튼
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+	
+	<script>
+        //1.카카오 초기화
+        Kakao.init('4074733aca617fc06b97b1b8ee4650b6');//키등록
+        console.log(Kakao.isInitialized());
+
+        function loginWithKakao() {
+             Kakao.Auth.login({
+              success: function(authObj) {
+                getInfo();//2.사용자 정보요청 함수 호출
+                },
+            fail: function(err) {
+                alert(JSON.stringify(err))
+                }, 
+            })
+        }
+        //3.사용자 정보 얻기
+        function getInfo(){
+            Kakao.API.request({
+                url: '/v2/user/me',
+                success: function(res) {
+                    console.log(res);
+                    //다음 코드로 id 추출
+                    //아이디
+                    var id = res.id;
+                    //이메일
+                    var email = res.kakao_account_email;
+                    //이름
+                    var name = res.kakao_account.profile.nickname;
+                    //프로필사진
+                    var profile_img=res.kakao_account.profile.profile_image_url;
+
+                    console.log(id,email,name,profile_img);
+
+                    //폼요청 url변경
+                    document.loginForm.action = "xxx";
+                    //폼 id의 value값 변경 
+                    document.loginForm.id.value=id;
+                    
+                    document.loginForm.name.value=name;
+
+                    document.loginForm.submit();//서브밋
+                    
+                },
+                fail: function(error) {
+                alert("사용자 요청 정보에 실패했습니다. 동의 항목을 확인")
+                },
+            })
+        }
+
+        //4.로그아웃 
+        function kakaoLogout() {
+            if (!Kakao.Auth.getAccessToken()) {
+            alert('Not logged in.')
+            return
+            }
+            Kakao.Auth.logout(function() {
+            alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken())
+            })
+        }
+    </script>
+</body>
+</html>

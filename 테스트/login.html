@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <style>
+        @font-face { font-family: 'GmarketSansBold'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') 
+        format('woff'); font-weight: normal; 
+        font-style: normal; }
+        
+        body{width:100%; font-family: 'GmarketSansBold';
+        font-style: normal; 
+        font-weight: normal;
+        }
+
+        *{padding:0;margin:0;box-sizing:border-box;}
+        .btn{border-radius: 0px;}
+
+        section {margin-top:50px;}
+        .titlebox {width:250px; 
+                   text-align: center;}
+        .login-form{margin:0; float:left;}
+        .login-form form{border-radius: 10px;}
+
+        
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div class="row">
+            <div class="login-form">
+                <div class="titlebox">로그인</div>
+                
+                <form action="">
+                    <div class="form-group">
+                        <label>이메일</label>
+                        <input type="text" class="form-control" placeholder="example@naver.com">     
+                    </div>
+
+                    <div class="form-group">
+                        <label>비밀번호</label>
+                        <input type="password" class="form-control" placeholder="********">
+                    </div>
+                    <div>
+                        <a href="#" class="reset-password-btn">비밀번호를 잊으셨나요?</a>
+                        <a href="#" class="join-btn">회원가입하기</a>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-info btn-block">로그인</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
