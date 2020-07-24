@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="css/stayle.css">
+
+</head>
+<body>
+    <section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-9 col-sm-12 join-form">
+					
+					<!--로고 버튼-->
+                    <div class="form-group">
+						<button type="button" class="btn btn-lg btn-info btn-block"
+                        onclick="location.href='/heechart/'">메인화면</button>
+                    </div>
+					<div class="titlebox">
+					<h2>회원가입</h2></div>
+
+					<form action="JoinForm" method="post" name="regForm">
+						<div class="form-group">
+							<label for="name">이름</label> <input type="text"
+								class="form-control" name="name" id="name"
+								placeholder="홍길동">
+						</div>
+						<div class="form-group">
+							<label for="email">이메일</label> <input type="text"
+								class="form-control" id="email" name="email"
+								placeholder="example@naver.com">
+							</div>
+						<div class="form-group">
+							<label for="hp">휴대폰번호</label><br> <input
+								class="form-control sel" placeholder="-제외하고 입력하세요." name="phone" id="phone">
+						
+						<div class="form-group">
+							<label for="password">비밀번호(8자이상)</label> <input type="password"
+								class="form-control" id="password" name="pw"
+								placeholder="********">
+						</div>
+						<div class="form-group">
+							<label for="password-confrim">비밀번호 확인</label> <input
+								type="password" class="form-control" name="password-confrim"
+								id="password-confrim" placeholder="********">
+						</div>
+					
+
+						<div class="form-group">
+							<label for="addr-num">주소</label> <input type="text"
+								class="form-control" name="address1" id="addr-basic"
+								placeholder="기본주소">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="address2"
+								id="addr-detail" placeholder="상세주소">
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn btn-lg btn-success btn-block"
+								onclick="check()">회원가입하기</button>
+						</div>
+						<hr>
+						<!--카카오로그인 버튼-->
+						<a id="custom-login-btn" href="javascript:loginWithKakao()" > <img
+							src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
+							width="200" />
+						</a>
+
+
+						
+
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+
+	<script>
+	function check() {
+		
+		if(confirm("가입하시겠습니까?") ) {
+			
+			document.regForm.submit();
+		}
+		
+	}
+	</script>
+
+</body>
+</html>

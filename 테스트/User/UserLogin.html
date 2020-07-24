@@ -4,75 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--카카오SDK-->
-    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <style>
-        @font-face { font-family: 'GmarketSansBold'; 
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') 
-        format('woff'); font-weight: normal; 
-        font-style: normal; }
-
-        body{width:100%; font-family: 'GmarketSansBold';
-        font-style: normal; 
-        font-weight: normal;
-        }
-
-        *{padding:0;margin:0;box-sizing:border-box;}
-        .btn-block{border-radius: 0px;}
-
-        section {margin-top:50px;}
-        .titlebox {width:250px; 
-                text-align: center;}
+    <link rel="stylesheet" href="css/stayle.css">
 
 
-    </style>
 </head>
 <body>
     <section>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-9 col-sm-12 join-form">
+				<div class="col-lg-6 col-md-9 col-sm-12 login-form">
                     
+                    <!--로고 버튼-->
                     <div class="form-group">
                         <button type="button" class="btn btn-lg btn-info btn-block"
                         onclick="location.href='/heechart/'">메인화면</button>
                     </div>
-                    
-                    <div class="titlebox">로그인</div>
+                <div class="LoginPage">
+                    <div class="titlebox">
+                        <h2 class="logt">로그인</h2></div>
 
 					<form action="LoginForm" method="post" name="regForm">
-						<div class="form-group">
+						<div class="form-group logform">
 							<label for="id">이메일</label> <input type="text"
 								class="form-control" name="id" id="id" placeholder="example@naver.com">
-						</div>
-						<div class="form-group">
+                        </div>
+                        <h6 class="msgt">
+                            <span id="msg">이메일을 입력해주세요.</span>
+                        </h6>
+                    <div class="pwform">
+						<div class="form-group logform">
 							<label for="password">비밀번호</label> <input type="password"
 								class="form-control" name="pw" id="password" placeholder="********">
+                        </div>
+                        <h6 class="msgt">
+                            <span id="msg">비밀번호를 입력해주세요.</span>
+                        </h6>
+                    </div>
+
+						<div class="form-group">
+                            <a class="resetPw" href="resetPw.html">비밀번호를 잊으셨나요?</a>
+                            <a class="join" href="UserJoin.html">회원가입하기</a>
 						</div>
 
 						<div class="form-group">
-                            <button type="button" class="btn btn-lg btn-reset-password btn-block"
-								onclick="location.href='ResetPw'">비밀번호를 잊으셨나요?</button>
-							<button type="button" class="btn btn-lg btn-success-join btn-block"
-								onclick="location.href='Join'">회원가입</button>
-						</div>
-
-						<div class="form-group">
-							<button type="submit" class="btn btn-lg btn-info btn-block">로그인</button>
+							<button type="submit" class="btn btn-lg btn-info btn-block logBtn">로그인</button>
 						</div>
 						
 						<!--카카오로그인 버튼-->
-						카카오 로그인 버튼
-						<a id="custom-login-btn" href="javascript:loginWithKakao()"> <img
+						<a id="custom-login-btn" href="javascript:loginWithKakao()" > <img
 							src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
-							width="222" />
+							width="200" />
 						</a>
-						카카오 로그인 버튼
+						
 					</form>
+
+                </div>
+                <div class="LoginPageBack"></div>      
+                </div>    
 				</div>
 			</div>
 		</div>
@@ -140,5 +132,7 @@
             })
         }
     </script>
+   
+    
 </body>
 </html>
