@@ -1,0 +1,188 @@
+@font-face { @font-face { font-family: 'IBMPlexSansKR-Text'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff') 
+    format('woff'); 
+    font-weight: normal; 
+    font-style: normal; } }
+    
+    *{padding:0;margin:0;box-sizing:border-box;}
+
+    body{
+        width:100%; 
+        font-family: 'IBMPlexSansKR-Text';
+        font-style: normal; 
+        font-weight: normal;
+
+    } 
+
+    form,input{margin: 0; padding: 0;}
+    label {display: inline-block;}
+    /*------로그인-------*/ 
+    .containerL{margin-left: 0;}  
+    .Loginrow{
+            display: flex;
+            justify-content: center;}
+
+    .FormContainer{
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding: 24px;
+        width: 100%;
+    }
+
+    .LoginFormContainer{
+        width: 100%;
+        max-width: 376px;
+    }
+    .LoginFormTop{
+        position: relative;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .LoginTitleText{
+        font-size: 32px;
+        font-weight: bold;
+        color: rgb(62, 64, 66);
+    }
+    .StyledFormGroup{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 16px;
+    }
+    .LabelName{
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 20px;
+        letter-spacing: -0.15px;
+        color: rgb(62, 64, 66);
+        margin: 0px 0px 4px;
+    }
+    .StyledInputField{
+        display: block;
+        margin-top: 2px;
+        border-radius: 3px;
+    }
+    .StyledInputFieldText{
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 20px;
+        letter-spacing: -0.15px;
+        background-color: white;
+        height: 48px;
+        width: 100%;
+        color: rgb(27, 28, 29);
+        box-sizing: border-box;
+        margin: 0px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(221, 224, 226);
+        border-image: initial;
+        flex: 1 1 auto;
+        padding: 0px 16px;
+    }
+    input[type="password"],input[type="email"]{appearance: none;}
+    .buttonWrap{margin-bottom:16px}
+    .resetPwButton{
+        font-size: 11px;
+        font-weight: normal;
+        line-height: 16px;
+        letter-spacing: normal;
+        display: block;
+        float: left;
+        color: rgb(168, 174, 179);
+        margin: 0px;
+    
+    }
+    .joinButton{
+        font-size: 11px;
+        font-weight: normal;
+        line-height: 16px;
+        letter-spacing: normal;
+        display: block;
+        text-align: right;
+        color: rgb(168, 174, 179);
+        margin: 0px;
+    }
+    .btn{
+        width: 100%;
+        color: rgb(255, 255, 255);
+        background: rgb(255, 146, 43);
+        border: 0;
+        font-size: 16px;
+        }
+    .logBtn{ margin: 16px,0px;}
+
+    .btn:hover{
+        background: rgb(238, 118, 6);
+        }
+    .ButtonText{
+        font-weight: 700;
+        font-size: 16px
+    }
+    .LoginFormBackground{display:inline-block}
+
+    img{ margin-left: auto;}
+    @media(max-width:1023px){
+        .LoginFormBackground{display: none;}
+    }
+     /*-----비밀번호 찾기-----*/
+     .pageMessege h1{
+        margin-top: 150px;
+        font-size: 32px;
+        line-height: 44px;
+        letter-spacing: -0.6px;
+        margin: 16px 0px 16px;
+        font-weight: 600;
+    }
+    .resetPw-form{
+        margin-top: 20px;
+   
+    }
+    .pageMessege{
+        width: 45%;
+        margin: auto;
+    }
+    .pg{padding: 64px 0px 128px;
+    }
+    .sendMail{
+        color: white;
+        background-color: black;
+        margin-top:16px;
+    }
+    .sendMail:hover{
+        background: rgb(168, 174, 179);
+        
+    }
+
+    
+
+    /*------회원가입------*/
+    .JoinContainer{padding:24px;}
+    .JoinFormContainer{
+        margin: auto;
+        width: 45%;}
+    @media(max-width:1023px){
+        .JoinFormContainer{
+            margin: auto;
+            width: 100%;}
+    }
+    .JoinFormContainer h1{
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+        letter-spacing: -0.6px;
+        margin: 16px 0px 48px;
+    }
+    
+
+
+
+
+
+

@@ -15,7 +15,7 @@
         line-height:1.5;
     }
 
-    *{padding:0;margin:0;box-sizing:border-box;}
+    *{padding:0;margin:auto;box-sizing:border-box;}
     .btn{
         width: 100%;
         color: rgb(255, 255, 255);
@@ -105,9 +105,10 @@
    
     }
     .pageMessege{
-        width: 100%;
+        width: 33.33%;
     }
-    .pg{padding: 64px 0px 128px;}
+    .pg{padding: 64px 0px 128px;
+    }
     .sendMail{
         color: white;
         background-color: black;

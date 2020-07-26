@@ -8,75 +8,86 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<link rel="stylesheet" href="css/stayle.css">
+	<link rel="stylesheet" href="css/stayle2.css">
 
 </head>
 <body>
     <section>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-9 col-sm-12 join-form">
-					
-					<!--로고 버튼-->
-                    <div class="form-group">
-						<button type="button" class="btn btn-lg btn-info btn-block"
-                        onclick="location.href='/heechart/'">메인화면</button>
-                    </div>
-					<div class="titlebox">
-					<h2>회원가입</h2></div>
+			<div class="Joinrow">					
+				<div class="JoinContainer">
 
-					<form action="JoinForm" method="post" name="regForm">
-						<div class="form-group">
-							<label for="name">이름</label> <input type="text"
-								class="form-control" name="name" id="name"
-								placeholder="홍길동">
-						</div>
-						<div class="form-group">
-							<label for="email">이메일</label> <input type="text"
-								class="form-control" id="email" name="email"
-								placeholder="example@naver.com">
+					<div class="JoinFormContainer">
+						<h1>회원가입</h1>
+
+						<form action="JoinForm" method="post" name="regForm">
+							<div class="StyledFormGroup">
+								<label class="LabelName">이름</label> <input type="text"
+									class="StyledInputFieldText" name="name" id="name"
+									placeholder="홍길동">
+									<h6 class="msgt">
+                                        <span id="msg">이름을 입력해주세요.</span>
+                                    </h6>
 							</div>
-						<div class="form-group">
-							<label for="hp">휴대폰번호</label><br> <input
-								class="form-control sel" placeholder="-제외하고 입력하세요." name="phone" id="phone">
+							<div class="StyledFormGroup">
+								<label class="LabelName">이메일</label> <input type="text"
+									class="StyledInputFieldText" id="email" name="email"
+									placeholder="example@naver.com">
+									<h6 class="msgt">
+                                        <span id="msg">이메일을 입력해주세요.</span>
+                                    </h6>
+							</div>
+							<div class="StyledFormGroup">
+								<label class="LabelName">휴대폰번호</label> <input
+									class="StyledInputFieldText" placeholder="-제외하고 입력하세요." name="phone" id="phone">
+									<h6 class="msgt">
+                                        <span id="msg">휴대폰번호를 입력해주세요.</span>
+                                    </h6>
+							</div>
+							
+							<div class="StyledFormGroup">
+								<label class="LabelName">비밀번호(8자이상)</label> <input type="password"
+									class="StyledInputFieldText" id="password" name="pw"
+									placeholder="********">
+									<h6 class="msgt">
+                                        <span id="msg">비밀번호를 입력해주세요.</span>
+                                    </h6>
+							</div>
+							<div class="StyledFormGroup">
+								<label class="LabelName">비밀번호 확인</label> <input
+									type="password" class="StyledInputFieldText" name="password-confrim"
+									id="password-confrim" placeholder="********">
+									<h6 class="msgt">
+                                        <span id="msg">비밀번호 확인을 입력해주세요.</span>
+                                    </h6>
+							</div>
 						
-						<div class="form-group">
-							<label for="password">비밀번호(8자이상)</label> <input type="password"
-								class="form-control" id="password" name="pw"
-								placeholder="********">
-						</div>
-						<div class="form-group">
-							<label for="password-confrim">비밀번호 확인</label> <input
-								type="password" class="form-control" name="password-confrim"
-								id="password-confrim" placeholder="********">
-						</div>
+
+							<div class="StyledFormGroup">
+								<label class="LabelName">주소</label> <input type="text"
+									class="StyledInputFieldText" name="address1" id="addr-basic"
+									placeholder="기본주소">
+							</div>
+							<div class="StyledFormGroup">
+								<input type="text" class="StyledInputFieldText" name="address2"
+									id="addr-detail" placeholder="상세주소">
+							</div>
+						
+							<button type="button" class="btn btn-lg btn-info btn-block logBtn"
+									onclick="check()"><span class="ButtonText">회원가입하기</span></button>
 					
-
-						<div class="form-group">
-							<label for="addr-num">주소</label> <input type="text"
-								class="form-control" name="address1" id="addr-basic"
-								placeholder="기본주소">
+						</form>
+							<hr>
+						<div>
+							<!--카카오로그인 버튼-->
+							<a id="custom-login-btn" href="javascript:loginWithKakao()" > <img
+								src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
+								width="100%" />
+							</a>
 						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" name="address2"
-								id="addr-detail" placeholder="상세주소">
-						</div>
-						<div class="form-group">
-							<button type="button" class="btn btn-lg btn-success btn-block"
-								onclick="check()">회원가입하기</button>
-						</div>
-						<hr>
-						<!--카카오로그인 버튼-->
-						<a id="custom-login-btn" href="javascript:loginWithKakao()" > <img
-							src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
-							width="200" />
-						</a>
+					</div>		
 
 
-						
-
-
-					</form>
 				</div>
 			</div>
 		</div>
